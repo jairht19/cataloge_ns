@@ -28,6 +28,7 @@ SEED_URLS = [
 ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs" / "oracle-netsuite-sdf"
 EXAMPLES_DIR = ROOT / "examples" / "sdf-objects"
+ADDITIONAL_FILES_DIR = ROOT / "examples" / "sdf-additional-files"
 
 
 @dataclass
@@ -207,7 +208,29 @@ def object_summary(name: str, url: str, page: PageText) -> dict[str, object]:
             for text, href in page.section_links.get("Structured Fields", [])
             if href.startswith("SDFxml_") and text.islower()
         ],
+        "additional_files": additional_files(page),
     }
+
+
+def additional_files(page: PageText) -> list[str]:
+    try:
+        start = page.lines.index("Additional Files")
+    except ValueError:
+        return []
+
+    end = len(page.lines)
+    try:
+        end = page.lines.index("General Notices", start + 1)
+    except ValueError:
+        pass
+
+    files: list[str] = []
+    for line in page.lines[start + 1 : end]:
+        if line.startswith("To use this SDF custom object"):
+            continue
+        if "This file" in line:
+            files.append(line)
+    return dedupe(files)
 
 
 def feature_dependencies(page: PageText) -> list[str]:
@@ -257,6 +280,43 @@ def render_example(summary: dict[str, object]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def example_scriptid(name: str) -> str:
+    if name.endswith("script"):
+        return f"customscript_{name}_example"
+    if name.endswith("customfield"):
+        return f"custrecord_{name}_example"
+    return f"cust{name}_example"
+
+
+def render_additional_file(name: str, file_description: str) -> tuple[str, str] | None:
+    scriptid = example_scriptid(name)
+    if ".template.xml" in file_description:
+        return (
+            f"{scriptid}.template.xml",
+            textwrap.dedent(
+                """\
+                <?xml version="1.0"?>
+                <pdf>
+                  <body>Example Advanced PDF Template</body>
+                </pdf>
+                """
+            ),
+        )
+    if ".template.html" in file_description:
+        return (
+            f"{scriptid}.template.html",
+            textwrap.dedent(
+                """\
+                <!doctype html>
+                <html>
+                  <body>Example Email Template</body>
+                </html>
+                """
+            ),
+        )
+    return None
+
+
 def extract_topic_examples(seed_pages: dict[str, PageText]) -> list[tuple[str, str, str]]:
     examples: list[tuple[str, str, str]] = []
     for url, page in seed_pages.items():
@@ -270,15 +330,23 @@ def extract_topic_examples(seed_pages: dict[str, PageText]) -> list[tuple[str, s
 def main() -> int:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     EXAMPLES_DIR.mkdir(parents=True, exist_ok=True)
+    ADDITIONAL_FILES_DIR.mkdir(parents=True, exist_ok=True)
 
     seed_pages = {url: parse_page(url) for url in SEED_URLS}
     objects = object_links(seed_pages[SEED_URLS[0]])
     summaries = []
+    additional_files_count = 0
     for name, url in objects:
         page = parse_page(url)
         summary = object_summary(name, url, page)
         summaries.append(summary)
         (EXAMPLES_DIR / f"{name}.xml").write_text(render_example(summary), encoding="utf-8")
+        for file_description in summary["additional_files"]:
+            additional_file = render_additional_file(name, file_description)
+            if additional_file:
+                filename, contents = additional_file
+                (ADDITIONAL_FILES_DIR / filename).write_text(contents, encoding="utf-8")
+                additional_files_count += 1
 
     examples = extract_topic_examples(seed_pages)
     topic_examples_md = ["# Oracle Topic Examples", ""]
@@ -307,8 +375,8 @@ def main() -> int:
         "",
         "## Objects",
         "",
-        "| Object | Source | Features | Attributes | Fields | Structured fields | Example |",
-        "| --- | --- | --- | --- | --- | --- | --- |",
+        "| Object | Source | Features | Attributes | Fields | Structured fields | Additional files | Example |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for summary in summaries:
         name = str(summary["name"])
@@ -316,13 +384,15 @@ def main() -> int:
         attrs = ", ".join(summary["attributes"]) or "-"
         fields = ", ".join(summary["fields"]) or "-"
         structured = ", ".join(dedupe(list(summary["structured_fields"]))) or "-"
+        additional = "<br>".join(summary["additional_files"]) or "-"
         index.append(
-            f"| `{name}` | [Oracle]({summary['url']}) | {features} | {attrs} | {fields} | {structured} | "
+            f"| `{name}` | [Oracle]({summary['url']}) | {features} | {attrs} | {fields} | {structured} | {additional} | "
             f"[XML](../../examples/sdf-objects/{name}.xml) |"
         )
     (DOCS_DIR / "object-definitions.md").write_text("\n".join(index) + "\n", encoding="utf-8")
 
     print(f"Wrote {len(summaries)} object examples to {EXAMPLES_DIR}")
+    print(f"Wrote {additional_files_count} additional file examples to {ADDITIONAL_FILES_DIR}")
     print(f"Wrote {DOCS_DIR / 'object-definitions.md'}")
     print(f"Wrote {DOCS_DIR / 'topic-examples.md'}")
     return 0

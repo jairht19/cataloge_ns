@@ -5,6 +5,7 @@ Este repositorio proporciona un catalogo local de ejemplos XML para SDF de NetSu
 ## Contenido
 
 - `examples/sdf-objects/`: ejemplos XML minimos por objeto SDF soportado.
+- `examples/sdf-additional-files/`: archivos adicionales de ejemplo requeridos u opcionales por algunos objetos SDF.
 - `docs/oracle-netsuite-sdf/object-definitions.md`: indice de objetos con atributos, campos, campos estructurados, features y URL oficial de Oracle.
 - `docs/oracle-netsuite-sdf/topic-examples.md`: ejemplos publicados en las paginas tematicas consultadas.
 - `tools/fetch_oracle_sdf_docs.py`: extractor para regenerar el catalogo desde Oracle NetSuite Online Help.
