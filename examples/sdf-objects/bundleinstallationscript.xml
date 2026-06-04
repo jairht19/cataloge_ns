@@ -1,0 +1,14 @@
+<bundleinstallationscript scriptid="customscript_bundleinstallationscript_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <afterinstallfunction>TODO_afterinstallfunction</afterinstallfunction>
+  <afterupdatefunction>TODO_afterupdatefunction</afterupdatefunction>
+  <beforeinstallfunction>TODO_beforeinstallfunction</beforeinstallfunction>
+  <beforeuninstallfunction>TODO_beforeuninstallfunction</beforeuninstallfunction>
+  <beforeupdatefunction>TODO_beforeupdatefunction</beforeupdatefunction>
+</bundleinstallationscript>

@@ -1,0 +1,18 @@
+<singlepageapp scriptid="custsinglepageapp_example">
+  <name>Example name</name>
+  <url>TODO_url</url>
+  <clientscriptfile>[src=FileCabinet/SuiteScripts/example.js]</clientscriptfile>
+  <serverscriptfile>[src=FileCabinet/SuiteScripts/example.js]</serverscriptfile>
+  <folder>TODO_folder</folder>
+  <description>Example description</description>
+  <assetsfolder>TODO_assetsfolder</assetsfolder>
+  <audienceallroles>TODO_audienceallroles</audienceallroles>
+  <loglevel>TODO_loglevel</loglevel>
+  <audienceroles>TODO_audienceroles</audienceroles>
+  <executeas>TODO_executeas</executeas>
+  <usesuif>TODO_usesuif</usesuif>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <notifyemails>TODO_notifyemails</notifyemails>
+</singlepageapp>

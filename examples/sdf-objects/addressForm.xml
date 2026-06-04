@@ -1,0 +1,4 @@
+<addressForm scriptid="custaddressForm_example">
+  <name>Example name</name>
+  <countries>TODO_countries</countries>
+</addressForm>

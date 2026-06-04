@@ -1,0 +1,18 @@
+<workflow scriptid="custworkflow_example">
+  <name>Example name</name>
+  <recordtypes>TODO_recordtypes</recordtypes>
+  <description>Example description</description>
+  <initcontexts>TODO_initcontexts</initcontexts>
+  <initeventtypes>TODO_initeventtypes</initeventtypes>
+  <initsavedsearchcondition>TODO_initsavedsearchcondition</initsavedsearchcondition>
+  <initsavedsearchfilter>TODO_initsavedsearchfilter</initsavedsearchfilter>
+  <inittriggertype>TODO_inittriggertype</inittriggertype>
+  <initoncreate>TODO_initoncreate</initoncreate>
+  <initonvieworupdate>TODO_initonvieworupdate</initonvieworupdate>
+  <initlocalizationcontext>TODO_initlocalizationcontext</initlocalizationcontext>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <releasestatus>TODO_releasestatus</releasestatus>
+  <runasadmin>TODO_runasadmin</runasadmin>
+  <keephistory>TODO_keephistory</keephistory>
+</workflow>

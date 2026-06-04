@@ -1,0 +1,21 @@
+<clientscript scriptid="customscript_clientscript_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <fieldchangedfunction>TODO_fieldchangedfunction</fieldchangedfunction>
+  <lineinitfunction>TODO_lineinitfunction</lineinitfunction>
+  <pageinitfunction>TODO_pageinitfunction</pageinitfunction>
+  <postsourcingfunction>TODO_postsourcingfunction</postsourcingfunction>
+  <recalcfunction>TODO_recalcfunction</recalcfunction>
+  <saverecordfunction>TODO_saverecordfunction</saverecordfunction>
+  <validatedeletefunction>TODO_validatedeletefunction</validatedeletefunction>
+  <validatefieldfunction>TODO_validatefieldfunction</validatefieldfunction>
+  <validateinsertfunction>TODO_validateinsertfunction</validateinsertfunction>
+  <validatelinefunction>TODO_validatelinefunction</validatelinefunction>
+</clientscript>

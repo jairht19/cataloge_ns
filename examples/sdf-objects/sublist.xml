@@ -1,0 +1,22 @@
+<sublist scriptid="custsublist_example">
+  <label>Example label</label>
+  <savedsearch>TODO_savedsearch</savedsearch>
+  <sublisttype>TODO_sublisttype</sublisttype>
+  <tab>TODO_tab</tab>
+  <field>TODO_field</field>
+  <purchase>TODO_purchase</purchase>
+  <sale>TODO_sale</sale>
+  <opportunity>TODO_opportunity</opportunity>
+  <journal>TODO_journal</journal>
+  <expensereport>TODO_expensereport</expensereport>
+  <inventoryadjustment>TODO_inventoryadjustment</inventoryadjustment>
+  <assemblybuild>TODO_assemblybuild</assemblybuild>
+  <fulfillmentrequest>TODO_fulfillmentrequest</fulfillmentrequest>
+  <storepickup>TODO_storepickup</storepickup>
+  <itemreceipt>TODO_itemreceipt</itemreceipt>
+  <itemfulfillment>TODO_itemfulfillment</itemfulfillment>
+  <payment>TODO_payment</payment>
+  <vendorpayment>TODO_vendorpayment</vendorpayment>
+  <deposit>TODO_deposit</deposit>
+  <depositapplication>TODO_depositapplication</depositapplication>
+</sublist>

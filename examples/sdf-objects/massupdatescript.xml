@@ -1,0 +1,12 @@
+<massupdatescript scriptid="customscript_massupdatescript_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <defaultfunction>TODO_defaultfunction</defaultfunction>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+</massupdatescript>

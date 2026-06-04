@@ -1,0 +1,7 @@
+<customlist scriptid="custcustomlist_example">
+  <name>Example name</name>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>F</isordered>
+</customlist>

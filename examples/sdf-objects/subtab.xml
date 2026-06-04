@@ -1,0 +1,5 @@
+<subtab scriptid="custsubtab_example">
+  <title>Example title</title>
+  <tabtype>TODO_tabtype</tabtype>
+  <parent>TODO_parent</parent>
+</subtab>

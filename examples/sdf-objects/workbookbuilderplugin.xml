@@ -1,0 +1,14 @@
+<workbookbuilderplugin scriptid="custworkbookbuilderplugin_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <loglevel>TODO_loglevel</loglevel>
+  <runasrole>[scriptid=customrole_example]</runasrole>
+  <status>TODO_status</status>
+</workbookbuilderplugin>

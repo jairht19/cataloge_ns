@@ -1,0 +1,10 @@
+<customtransactiontype scriptid="custcustomtransactiontype_example">
+  <name>Example name</name>
+  <subliststyle>TODO_subliststyle</subliststyle>
+  <transactionstyle>TODO_transactionstyle</transactionstyle>
+  <iscredit>F</iscredit>
+  <isposting>F</isposting>
+  <showstatus>F</showstatus>
+  <isvoidable>F</isvoidable>
+  <cancloseorder>TODO_cancloseorder</cancloseorder>
+</customtransactiontype>

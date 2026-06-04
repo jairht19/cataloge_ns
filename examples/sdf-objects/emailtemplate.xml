@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtemplate_example">
+  <name>Example name</name>
+  <mediaitem>TODO_mediaitem</mediaitem>
+  <description>Example description</description>
+  <recordtype>TODO_recordtype</recordtype>
+  <isinactive>F</isinactive>
+  <subject>TODO_subject</subject>
+  <isprivate>F</isprivate>
+  <addunsubscribelink>TODO_addunsubscribelink</addunsubscribelink>
+  <addcompanyaddress>TODO_addcompanyaddress</addcompanyaddress>
+  <usesmedia>TODO_usesmedia</usesmedia>
+</emailtemplate>

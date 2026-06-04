@@ -1,0 +1,22 @@
+<savedcsvimport scriptid="custsavedcsvimport_example">
+  <recordtype>TODO_recordtype</recordtype>
+  <importname>TODO_importname</importname>
+  <datahandling>TODO_datahandling</datahandling>
+  <decimaldelimiter>TODO_decimaldelimiter</decimaldelimiter>
+  <columndelimiter>TODO_columndelimiter</columndelimiter>
+  <entryform>TODO_entryform</entryform>
+  <transactionform>TODO_transactionform</transactionform>
+  <customrecord>TODO_customrecord</customrecord>
+  <customtransaction>TODO_customtransaction</customtransaction>
+  <charencoding>TODO_charencoding</charencoding>
+  <logsystemnotescustfields>TODO_logsystemnotescustfields</logsystemnotescustfields>
+  <overwritemissingfields>TODO_overwritemissingfields</overwritemissingfields>
+  <validatemandatorycustfields>TODO_validatemandatorycustfields</validatemandatorycustfields>
+  <overwritesublists>TODO_overwritesublists</overwritesublists>
+  <ignorereadonly>TODO_ignorereadonly</ignorereadonly>
+  <preventduplicates>TODO_preventduplicates</preventduplicates>
+  <usemultithread>TODO_usemultithread</usemultithread>
+  <runserversuitescript>TODO_runserversuitescript</runserversuitescript>
+  <multiselectdelimiter>TODO_multiselectdelimiter</multiselectdelimiter>
+  <description>Example description</description>
+</savedcsvimport>

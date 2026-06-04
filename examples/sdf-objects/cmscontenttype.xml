@@ -1,0 +1,7 @@
+<cmscontenttype scriptid="custcmscontenttype_example">
+  <name>Example name</name>
+  <label>Example label</label>
+  <customrecordid>TODO_customrecordid</customrecordid>
+  <description>Example description</description>
+  <iconimagepath>TODO_iconimagepath</iconimagepath>
+</cmscontenttype>

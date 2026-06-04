@@ -1,0 +1,4 @@
+<reportdefinition scriptid="custreportdefinition_example">
+  <name>Example name</name>
+  <definition>TODO_definition</definition>
+</reportdefinition>

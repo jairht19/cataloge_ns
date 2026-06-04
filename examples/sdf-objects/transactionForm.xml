@@ -1,0 +1,7 @@
+<transactionForm scriptid="custtransactionForm_example">
+  <name>Example name</name>
+  <inactive>TODO_inactive</inactive>
+  <preferred>TODO_preferred</preferred>
+  <disclaimer>TODO_disclaimer</disclaimer>
+  <address>TODO_address</address>
+</transactionForm>

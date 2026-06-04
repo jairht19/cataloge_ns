@@ -1,0 +1,15 @@
+<customsegment scriptid="custcustomsegment_example">
+  <label>Example label</label>
+  <recordtype>TODO_recordtype</recordtype>
+  <filteredby>TODO_filteredby</filteredby>
+  <fieldtype>TODO_fieldtype</fieldtype>
+  <description>Example description</description>
+  <help>TODO_help</help>
+  <hasglimpact>TODO_hasglimpact</hasglimpact>
+  <ismandatory>F</ismandatory>
+  <displaytype>TODO_displaytype</displaytype>
+  <defaultselection>TODO_defaultselection</defaultselection>
+  <defaultrecordaccesslevel>TODO_defaultrecordaccesslevel</defaultrecordaccesslevel>
+  <defaultsearchaccesslevel>TODO_defaultsearchaccesslevel</defaultsearchaccesslevel>
+  <valuesdisplayorder>TODO_valuesdisplayorder</valuesdisplayorder>
+</customsegment>

@@ -1,0 +1,22 @@
+<customrecordtype scriptid="custcustomrecordtype_example">
+  <recordname>TODO_recordname</recordname>
+  <customsegment>TODO_customsegment</customsegment>
+  <accesstype>TODO_accesstype</accesstype>
+  <allowattachments>F</allowattachments>
+  <allowinlineediting>F</allowinlineediting>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>F</allowinlinedetaching>
+  <allowmobileaccess>F</allowmobileaccess>
+  <allownumberingoverride>F</allownumberingoverride>
+  <allowquickadd>F</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <allowuiaccess>F</allowuiaccess>
+  <description>Example description</description>
+  <enabledle>TODO_enabledle</enabledle>
+  <enablekeywords>TODO_enablekeywords</enablekeywords>
+  <enablemailmerge>TODO_enablemailmerge</enablemailmerge>
+  <enablenametranslation>TODO_enablenametranslation</enablenametranslation>
+  <enablenumbering>TODO_enablenumbering</enablenumbering>
+  <enableoptimisticlocking>TODO_enableoptimisticlocking</enableoptimisticlocking>
+  <enablesystemnotes>TODO_enablesystemnotes</enablesystemnotes>
+</customrecordtype>

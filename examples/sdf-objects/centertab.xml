@@ -1,0 +1,10 @@
+<centertab scriptid="custcentertab_example">
+  <label>Example label</label>
+  <center>[scriptid=custcenter_example]</center>
+  <allvendors>F</allvendors>
+  <allroles>F</allroles>
+  <allpartners>F</allpartners>
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <audslctrole>[scriptid=customrole_example]</audslctrole>
+</centertab>

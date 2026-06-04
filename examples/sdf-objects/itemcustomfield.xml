@@ -1,0 +1,22 @@
+<itemcustomfield scriptid="custrecord_itemcustomfield_example">
+  <fieldtype>TODO_fieldtype</fieldtype>
+  <label>Example label</label>
+  <selectrecordtype>TODO_selectrecordtype</selectrecordtype>
+  <applyformatting>TODO_applyformatting</applyformatting>
+  <defaultchecked>TODO_defaultchecked</defaultchecked>
+  <defaultselection>TODO_defaultselection</defaultselection>
+  <defaultvalue>TODO_defaultvalue</defaultvalue>
+  <description>Example description</description>
+  <displaytype>TODO_displaytype</displaytype>
+  <dynamicdefault>TODO_dynamicdefault</dynamicdefault>
+  <help>TODO_help</help>
+  <linktext>TODO_linktext</linktext>
+  <minvalue>TODO_minvalue</minvalue>
+  <maxvalue>TODO_maxvalue</maxvalue>
+  <storevalue>TODO_storevalue</storevalue>
+  <accesslevel>TODO_accesslevel</accesslevel>
+  <checkspelling>TODO_checkspelling</checkspelling>
+  <encryptatrest>TODO_encryptatrest</encryptatrest>
+  <displayheight>TODO_displayheight</displayheight>
+  <displaywidth>TODO_displaywidth</displaywidth>
+</itemcustomfield>

@@ -1,0 +1,22 @@
+<role scriptid="custrole_example">
+  <centertype>TODO_centertype</centertype>
+  <name>Example name</name>
+  <tfaduration>TODO_tfaduration</tfaduration>
+  <coreadminpermission>TODO_coreadminpermission</coreadminpermission>
+  <employeerestriction>TODO_employeerestriction</employeerestriction>
+  <employeeviewingallowed>TODO_employeeviewingallowed</employeeviewingallowed>
+  <ispartnerrole>F</ispartnerrole>
+  <issalesrole>F</issalesrole>
+  <issupportrole>F</issupportrole>
+  <issuerole>F</issuerole>
+  <restricttimeandexpenses>TODO_restricttimeandexpenses</restricttimeandexpenses>
+  <employeeselectionunrestricted>TODO_employeeselectionunrestricted</employeeselectionunrestricted>
+  <isinactive>F</isinactive>
+  <subsidiaryviewingallowed>TODO_subsidiaryviewingallowed</subsidiaryviewingallowed>
+  <subsidiaryoption>TODO_subsidiaryoption</subsidiaryoption>
+  <accountingbooksoption>TODO_accountingbooksoption</accountingbooksoption>
+  <issinglesignononly>F</issinglesignononly>
+  <iswebserviceonlyrole>F</iswebserviceonlyrole>
+  <restrictbydevice>TODO_restrictbydevice</restrictbydevice>
+  <restrictip>TODO_restrictip</restrictip>
+</role>

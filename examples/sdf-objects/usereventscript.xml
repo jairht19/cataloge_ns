@@ -1,0 +1,14 @@
+<usereventscript scriptid="customscript_usereventscript_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <aftersubmitfunction>TODO_aftersubmitfunction</aftersubmitfunction>
+  <beforeloadfunction>TODO_beforeloadfunction</beforeloadfunction>
+  <beforesubmitfunction>TODO_beforesubmitfunction</beforesubmitfunction>
+</usereventscript>

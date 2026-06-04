@@ -1,0 +1,5 @@
+<entryForm scriptid="custentryForm_example">
+  <name>Example name</name>
+  <inactive>TODO_inactive</inactive>
+  <preferred>TODO_preferred</preferred>
+</entryForm>

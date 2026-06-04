@@ -1,0 +1,7 @@
+<publisheddashboard scriptid="custpublisheddashboard_example">
+  <name>Example name</name>
+  <center>[scriptid=custcenter_example]</center>
+  <lockshortcuts>TODO_lockshortcuts</lockshortcuts>
+  <locknewbar>TODO_locknewbar</locknewbar>
+  <notes>TODO_notes</notes>
+</publisheddashboard>

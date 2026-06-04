@@ -1,0 +1,16 @@
+<plugintype scriptid="custplugintype_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <deploymentmodel>TODO_deploymentmodel</deploymentmodel>
+  <status>TODO_status</status>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <class>TODO_class</class>
+  <documentationfile>TODO_documentationfile</documentationfile>
+  <loglevel>TODO_loglevel</loglevel>
+</plugintype>

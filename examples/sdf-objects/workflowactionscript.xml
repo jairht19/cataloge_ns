@@ -1,0 +1,14 @@
+<workflowactionscript scriptid="customscript_workflowactionscript_example">
+  <name>Example name</name>
+  <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
+  <returnrecordtype>TODO_returnrecordtype</returnrecordtype>
+  <defaultfunction>TODO_defaultfunction</defaultfunction>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>TODO_notifyadmins</notifyadmins>
+  <notifyemails>TODO_notifyemails</notifyemails>
+  <notifygroup>TODO_notifygroup</notifygroup>
+  <notifyowner>TODO_notifyowner</notifyowner>
+  <notifyuser>TODO_notifyuser</notifyuser>
+  <returntype>TODO_returntype</returntype>
+</workflowactionscript>

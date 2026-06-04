@@ -1,0 +1,12 @@
+<sspapplication scriptid="custsspapplication_example">
+  <name>Example name</name>
+  <status>TODO_status</status>
+  <rootpath>TODO_rootpath</rootpath>
+  <appfolder>TODO_appfolder</appfolder>
+  <runtimeversion>TODO_runtimeversion</runtimeversion>
+  <description>Example description</description>
+  <isinactive>F</isinactive>
+  <loglevel>TODO_loglevel</loglevel>
+  <systemdomain>TODO_systemdomain</systemdomain>
+  <defaultsspfile>TODO_defaultsspfile</defaultsspfile>
+</sspapplication>
