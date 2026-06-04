@@ -1,4 +1,4 @@
-<role scriptid="custrole_example">
+<role scriptid="customrole_role_example">
   <centertype>TODO_centertype</centertype>
   <name>Example name</name>
   <tfaduration>TODO_tfaduration</tfaduration>

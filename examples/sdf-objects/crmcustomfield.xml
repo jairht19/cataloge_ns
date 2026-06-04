@@ -1,4 +1,4 @@
-<crmcustomfield scriptid="custrecord_crmcustomfield_example">
+<crmcustomfield scriptid="crmcustomfield_crmcustomfield_example">
   <fieldtype>TODO_fieldtype</fieldtype>
   <label>Example label</label>
   <selectrecordtype>TODO_selectrecordtype</selectrecordtype>

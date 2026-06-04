@@ -1,4 +1,4 @@
-<customglplugin scriptid="custcustomglplugin_example">
+<customglplugin scriptid="customscript_customglplugin_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <description>Example description</description>

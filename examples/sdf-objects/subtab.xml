@@ -1,4 +1,4 @@
-<subtab scriptid="custsubtab_example">
+<subtab scriptid="custtab_subtab_example">
   <title>Example title</title>
   <tabtype>TODO_tabtype</tabtype>
   <parent>TODO_parent</parent>

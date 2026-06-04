@@ -1,4 +1,4 @@
-<suitelet scriptid="custsuitelet_example">
+<suitelet scriptid="customscript_suitelet_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <defaultfunction>TODO_defaultfunction</defaultfunction>

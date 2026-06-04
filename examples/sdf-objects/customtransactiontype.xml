@@ -1,4 +1,4 @@
-<customtransactiontype scriptid="custcustomtransactiontype_example">
+<customtransactiontype scriptid="customtransaction_customtransactiontype_example">
   <name>Example name</name>
   <subliststyle>TODO_subliststyle</subliststyle>
   <transactionstyle>TODO_transactionstyle</transactionstyle>

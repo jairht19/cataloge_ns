@@ -1,4 +1,4 @@
-<transactionForm scriptid="custtransactionForm_example">
+<transactionForm scriptid="custform_transactionform_example">
   <name>Example name</name>
   <inactive>TODO_inactive</inactive>
   <preferred>TODO_preferred</preferred>

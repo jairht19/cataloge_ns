@@ -1,4 +1,4 @@
-<itemoptioncustomfield scriptid="custrecord_itemoptioncustomfield_example">
+<itemoptioncustomfield scriptid="custcol_itemoptioncustomfield_example">
   <fieldtype>TODO_fieldtype</fieldtype>
   <label>Example label</label>
   <selectrecordtype>TODO_selectrecordtype</selectrecordtype>

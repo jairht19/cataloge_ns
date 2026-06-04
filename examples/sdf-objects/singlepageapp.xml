@@ -1,4 +1,4 @@
-<singlepageapp scriptid="custsinglepageapp_example">
+<singlepageapp scriptid="custspa_singlepageapp_example">
   <name>Example name</name>
   <url>TODO_url</url>
   <clientscriptfile>[src=FileCabinet/SuiteScripts/example.js]</clientscriptfile>

@@ -1,4 +1,4 @@
-<centertab scriptid="custcentertab_example">
+<centertab scriptid="custcentertab_centertab_example">
   <label>Example label</label>
   <center>[scriptid=custcenter_example]</center>
   <allvendors>F</allvendors>

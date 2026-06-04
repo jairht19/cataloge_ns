@@ -1,4 +1,4 @@
-<pluginimplementation scriptid="custpluginimplementation_example">
+<pluginimplementation scriptid="customscript_pluginimplementation_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <customplugintype>TODO_customplugintype</customplugintype>

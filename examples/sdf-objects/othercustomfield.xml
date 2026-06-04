@@ -1,4 +1,4 @@
-<othercustomfield scriptid="custrecord_othercustomfield_example">
+<othercustomfield scriptid="customrecord_othercustomfield_example">
   <fieldtype>TODO_fieldtype</fieldtype>
   <label>Example label</label>
   <rectype>TODO_rectype</rectype>

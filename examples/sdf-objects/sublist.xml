@@ -1,4 +1,4 @@
-<sublist scriptid="custsublist_example">
+<sublist scriptid="custsublist_sublist_example">
   <label>Example label</label>
   <savedsearch>TODO_savedsearch</savedsearch>
   <sublisttype>TODO_sublisttype</sublisttype>

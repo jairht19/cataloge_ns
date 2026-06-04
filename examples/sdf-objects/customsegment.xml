@@ -1,4 +1,4 @@
-<customsegment scriptid="custcustomsegment_example">
+<customsegment scriptid="cseg_customsegment_example">
   <label>Example label</label>
   <recordtype>TODO_recordtype</recordtype>
   <filteredby>TODO_filteredby</filteredby>

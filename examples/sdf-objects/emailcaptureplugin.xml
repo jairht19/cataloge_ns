@@ -1,4 +1,4 @@
-<emailcaptureplugin scriptid="custemailcaptureplugin_example">
+<emailcaptureplugin scriptid="customscript_emailcaptureplugin_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <description>Example description</description>

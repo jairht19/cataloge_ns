@@ -1,4 +1,4 @@
-<cmscontenttype scriptid="custcmscontenttype_example">
+<cmscontenttype scriptid="custcontenttype_cmscontenttype_example">
   <name>Example name</name>
   <label>Example label</label>
   <customrecordid>TODO_customrecordid</customrecordid>

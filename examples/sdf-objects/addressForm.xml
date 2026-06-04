@@ -1,4 +1,4 @@
-<addressForm scriptid="custaddressForm_example">
+<addressForm scriptid="custform_addressform_example">
   <name>Example name</name>
   <countries>TODO_countries</countries>
 </addressForm>

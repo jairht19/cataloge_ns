@@ -1,4 +1,4 @@
-<restlet scriptid="custrestlet_example">
+<restlet scriptid="customscript_restlet_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <description>Example description</description>

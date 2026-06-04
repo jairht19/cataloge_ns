@@ -1,4 +1,4 @@
-<entryForm scriptid="custentryForm_example">
+<entryForm scriptid="custform_entryform_example">
   <name>Example name</name>
   <inactive>TODO_inactive</inactive>
   <preferred>TODO_preferred</preferred>

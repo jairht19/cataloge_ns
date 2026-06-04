@@ -15,6 +15,7 @@ from pathlib import Path
 
 
 BASE_URL = "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/"
+FILE_STRUCTURE_URL = BASE_URL + "subsect_1537555588.html"
 SEED_URLS = [
     BASE_URL + "SDFxml.html",
     BASE_URL + "section_158492224846.html",
@@ -23,6 +24,7 @@ SEED_URLS = [
     BASE_URL + "section_159542604516.html",
     BASE_URL + "section_1516037901.html",
     BASE_URL + "section_158492209268.html",
+    FILE_STRUCTURE_URL,
 ]
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -195,11 +197,12 @@ def dedupe(values: list[str]) -> list[str]:
     return result
 
 
-def object_summary(name: str, url: str, page: PageText) -> dict[str, object]:
+def object_summary(name: str, url: str, page: PageText, scriptid_prefix: str) -> dict[str, object]:
     return {
         "name": name,
         "title": page.headings[0] if page.headings else name,
         "url": url,
+        "scriptid_prefix": scriptid_prefix,
         "features": feature_dependencies(page),
         "attributes": field_names(page, "Attributes"),
         "fields": field_names(page, "Fields"),
@@ -247,6 +250,27 @@ def feature_dependencies(page: PageText) -> list[str]:
     return features
 
 
+def file_structure_prefixes(page: PageText) -> dict[str, str]:
+    prefixes: dict[str, str] = {}
+    for rows in page.tables.values():
+        for row in rows:
+            if len(row) < 3 or row[0] == "SDF Custom Object Type":
+                continue
+            object_type = normalize(row[0]).split()[0]
+            column_prefix = normalize(row[1]).replace(" ", "")
+            match = re.search(r"<([A-Za-z][A-Za-z0-9]*)\s+scriptid=\"([^\"]+)\"", row[2])
+            if match:
+                root_tag, prefix = match.groups()
+                prefixes[root_tag] = prefix
+                if object_type:
+                    prefixes[object_type] = prefix
+                    prefixes[object_type.lower()] = prefix
+            elif object_type and column_prefix:
+                prefixes[object_type] = column_prefix
+                prefixes[object_type.lower()] = column_prefix
+    return prefixes
+
+
 def xml_value(field: str) -> str:
     if field.startswith("is") or field.startswith("show") or field.startswith("all"):
         return "F"
@@ -264,11 +288,7 @@ def xml_value(field: str) -> str:
 def render_example(summary: dict[str, object]) -> str:
     name = str(summary["name"])
     attrs = summary["attributes"]
-    scriptid = f"cust{name}_example"
-    if name.endswith("script"):
-        scriptid = f"customscript_{name}_example"
-    elif name.endswith("customfield"):
-        scriptid = f"custrecord_{name}_example"
+    scriptid = scriptid_from_summary(summary)
     attr_text = f' scriptid="{scriptid}"' if "scriptid" in attrs else ""
 
     lines = [f"<{name}{attr_text}>"]
@@ -281,15 +301,19 @@ def render_example(summary: dict[str, object]) -> str:
 
 
 def example_scriptid(name: str) -> str:
-    if name.endswith("script"):
-        return f"customscript_{name}_example"
-    if name.endswith("customfield"):
-        return f"custrecord_{name}_example"
     return f"cust{name}_example"
 
 
-def render_additional_file(name: str, file_description: str) -> tuple[str, str] | None:
-    scriptid = example_scriptid(name)
+def scriptid_from_summary(summary: dict[str, object]) -> str:
+    name = str(summary["name"])
+    prefix = str(summary.get("scriptid_prefix") or "")
+    if prefix:
+        return f"{prefix}{name.lower()}_example"
+    return example_scriptid(name)
+
+
+def render_additional_file(summary: dict[str, object], file_description: str) -> tuple[str, str] | None:
+    scriptid = scriptid_from_summary(summary)
     if ".template.xml" in file_description:
         return (
             f"{scriptid}.template.xml",
@@ -317,9 +341,23 @@ def render_additional_file(name: str, file_description: str) -> tuple[str, str] 
     return None
 
 
+def clear_generated_outputs() -> None:
+    for directory, patterns in (
+        (EXAMPLES_DIR, ("*.xml",)),
+        (ADDITIONAL_FILES_DIR, ("*.template.xml", "*.template.html")),
+    ):
+        if not directory.exists():
+            continue
+        for pattern in patterns:
+            for path in directory.glob(pattern):
+                path.unlink()
+
+
 def extract_topic_examples(seed_pages: dict[str, PageText]) -> list[tuple[str, str, str]]:
     examples: list[tuple[str, str, str]] = []
     for url, page in seed_pages.items():
+        if url == FILE_STRUCTURE_URL:
+            continue
         for block in page.code_blocks:
             if block.startswith("<") and block.endswith(">"):
                 title = page.headings[0] if page.headings else page.title
@@ -331,18 +369,20 @@ def main() -> int:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     EXAMPLES_DIR.mkdir(parents=True, exist_ok=True)
     ADDITIONAL_FILES_DIR.mkdir(parents=True, exist_ok=True)
+    clear_generated_outputs()
 
     seed_pages = {url: parse_page(url) for url in SEED_URLS}
+    scriptid_prefixes = file_structure_prefixes(seed_pages[FILE_STRUCTURE_URL])
     objects = object_links(seed_pages[SEED_URLS[0]])
     summaries = []
     additional_files_count = 0
     for name, url in objects:
         page = parse_page(url)
-        summary = object_summary(name, url, page)
+        summary = object_summary(name, url, page, scriptid_prefixes.get(name, scriptid_prefixes.get(name.lower(), "")))
         summaries.append(summary)
         (EXAMPLES_DIR / f"{name}.xml").write_text(render_example(summary), encoding="utf-8")
         for file_description in summary["additional_files"]:
-            additional_file = render_additional_file(name, file_description)
+            additional_file = render_additional_file(summary, file_description)
             if additional_file:
                 filename, contents = additional_file
                 (ADDITIONAL_FILES_DIR / filename).write_text(contents, encoding="utf-8")
@@ -375,18 +415,19 @@ def main() -> int:
         "",
         "## Objects",
         "",
-        "| Object | Source | Features | Attributes | Fields | Structured fields | Additional files | Example |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Object | Source | Script ID prefix | Features | Attributes | Fields | Structured fields | Additional files | Example |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for summary in summaries:
         name = str(summary["name"])
+        prefix = str(summary["scriptid_prefix"]) or "-"
         features = ", ".join(summary["features"]) or "-"
         attrs = ", ".join(summary["attributes"]) or "-"
         fields = ", ".join(summary["fields"]) or "-"
         structured = ", ".join(dedupe(list(summary["structured_fields"]))) or "-"
         additional = "<br>".join(summary["additional_files"]) or "-"
         index.append(
-            f"| `{name}` | [Oracle]({summary['url']}) | {features} | {attrs} | {fields} | {structured} | {additional} | "
+            f"| `{name}` | [Oracle]({summary['url']}) | `{prefix}` | {features} | {attrs} | {fields} | {structured} | {additional} | "
             f"[XML](../../examples/sdf-objects/{name}.xml) |"
         )
     (DOCS_DIR / "object-definitions.md").write_text("\n".join(index) + "\n", encoding="utf-8")

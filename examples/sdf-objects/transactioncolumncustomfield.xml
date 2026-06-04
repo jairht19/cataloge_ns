@@ -1,4 +1,4 @@
-<transactioncolumncustomfield scriptid="custrecord_transactioncolumncustomfield_example">
+<transactioncolumncustomfield scriptid="custcol_transactioncolumncustomfield_example">
   <fieldtype>TODO_fieldtype</fieldtype>
   <label>Example label</label>
   <selectrecordtype>TODO_selectrecordtype</selectrecordtype>

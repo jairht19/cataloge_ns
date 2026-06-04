@@ -1,4 +1,4 @@
-<sspapplication scriptid="custsspapplication_example">
+<sspapplication scriptid="webapp_sspapplication_example">
   <name>Example name</name>
   <status>TODO_status</status>
   <rootpath>TODO_rootpath</rootpath>

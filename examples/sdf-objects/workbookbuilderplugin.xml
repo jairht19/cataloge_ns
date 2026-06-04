@@ -1,4 +1,4 @@
-<workbookbuilderplugin scriptid="custworkbookbuilderplugin_example">
+<workbookbuilderplugin scriptid="customscript_workbookbuilderplugin_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <description>Example description</description>

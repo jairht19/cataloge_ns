@@ -1,4 +1,4 @@
-<emailtemplate scriptid="custemailtemplate_example">
+<emailtemplate scriptid="custemailtmpl_emailtemplate_example">
   <name>Example name</name>
   <mediaitem>TODO_mediaitem</mediaitem>
   <description>Example description</description>

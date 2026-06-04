@@ -1,4 +1,4 @@
-<publisheddashboard scriptid="custpublisheddashboard_example">
+<publisheddashboard scriptid="custpubdashboard_publisheddashboard_example">
   <name>Example name</name>
   <center>[scriptid=custcenter_example]</center>
   <lockshortcuts>TODO_lockshortcuts</lockshortcuts>

@@ -1,4 +1,4 @@
-<customrecordtype scriptid="custcustomrecordtype_example">
+<customrecordtype scriptid="customrecord_customrecordtype_example">
   <recordname>TODO_recordname</recordname>
   <customsegment>TODO_customsegment</customsegment>
   <accesstype>TODO_accesstype</accesstype>

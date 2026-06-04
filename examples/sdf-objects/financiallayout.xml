@@ -1,4 +1,4 @@
-<financiallayout scriptid="custfinanciallayout_example">
+<financiallayout scriptid="customlayout_financiallayout_example">
   <name>Example name</name>
   <layout>TODO_layout</layout>
 </financiallayout>

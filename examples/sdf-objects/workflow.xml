@@ -1,4 +1,4 @@
-<workflow scriptid="custworkflow_example">
+<workflow scriptid="customworkflow_workflow_example">
   <name>Example name</name>
   <recordtypes>TODO_recordtypes</recordtypes>
   <description>Example description</description>

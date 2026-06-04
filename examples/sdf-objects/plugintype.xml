@@ -1,4 +1,4 @@
-<plugintype scriptid="custplugintype_example">
+<plugintype scriptid="customscript_plugintype_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <deploymentmodel>TODO_deploymentmodel</deploymentmodel>

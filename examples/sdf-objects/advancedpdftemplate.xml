@@ -1,4 +1,4 @@
-<advancedpdftemplate scriptid="custadvancedpdftemplate_example">
+<advancedpdftemplate scriptid="custtmpl_advancedpdftemplate_example">
   <title>Example title</title>
   <description>Example description</description>
   <displaysourcecode>TODO_displaysourcecode</displaysourcecode>

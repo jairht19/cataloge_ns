@@ -1,4 +1,4 @@
-<entitycustomfield scriptid="custrecord_entitycustomfield_example">
+<entitycustomfield scriptid="custentity_entitycustomfield_example">
   <fieldtype>TODO_fieldtype</fieldtype>
   <label>Example label</label>
   <selectrecordtype>TODO_selectrecordtype</selectrecordtype>

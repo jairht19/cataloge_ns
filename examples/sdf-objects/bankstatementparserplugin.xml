@@ -1,4 +1,4 @@
-<bankstatementparserplugin scriptid="custbankstatementparserplugin_example">
+<bankstatementparserplugin scriptid="customscript_bankstatementparserplugin_example">
   <name>Example name</name>
   <scriptfile>[src=FileCabinet/SuiteScripts/example.js]</scriptfile>
   <description>Example description</description>
