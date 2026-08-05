@@ -1,4 +1,4 @@
-# cataloge_ns
+# NetSuite SDF Catalog
 
 Este repositorio proporciona un catalogo local de ejemplos XML para SDF de NetSuite.
 
